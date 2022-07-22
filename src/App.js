@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import Dark from './Dark'
+
+import theme from './theme';
+import Profile from './Profile';
+import {ThemeProvider} from '@mui/material/styles';
+import data from './QuestionApi';
+import Counter from './Counter';
+import Items from './Items';
+import { Grid } from '@mui/material';
+import ApiTest from './ApiTest';
+import SearchImage from './SearchImage';
+
+const dis = data.map((ele)=>{return(
+  <Dark key={ele.id} id={ele.id} question={ele.question} answer={ele.answer} isopen={ele.isopen}   />
+)})
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+      <ThemeProvider theme={theme}>
+        {/* <Profile/> */}
+        {/* <ApiTest/> */}
+        <SearchImage/>
+        
+        {/* {dis} */}
+        {/* <Counter/> */}
+
+      </ThemeProvider>
+    
+  )
 }
 
-export default App;
+export default App

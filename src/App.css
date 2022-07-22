@@ -9,19 +9,101 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 5s linear;
   }
+}
+
+.head-data{
+  color: yellow;
+  background-color: black;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.if{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+h3{
+  color: rgb(8, 8, 8);
+  text-align: center;
+}
+h6{
+  color: rgb(172, 172, 90);
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn button{
+  background-color: rgb(76, 87, 238);
+}
+.maindiv a{
+  color: white;
+}
+.maindiv{
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: yellow;
+  height: 8vh;
+  align-items: center;
+}
+
+
+
+.countingResult{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vh;
+}
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 7vh;
+}
+.buttons button{
+  font-size: 4vh;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
+  
+}
+.App-header1 {
+  background-color: #f5f6f8;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: rgb(8, 8, 8);
+  
+}
+
+.conatainer{
+  
+  background-color: white;
+  color: black;
+}
+.conatainer{
+ 
+  background-color: white;
+  color: black;
 }
 
 .App-link {
