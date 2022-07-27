@@ -1,32 +1,34 @@
-import React from 'react';
-
-import Dark from './Dark'
-
+import React ,{useState} from 'react';
 import theme from './theme';
-import Profile from './Profile';
 import {ThemeProvider} from '@mui/material/styles';
-import data from './QuestionApi';
-import Counter from './Counter';
-import Items from './Items';
-import { Grid } from '@mui/material';
-import ApiTest from './ApiTest';
-import SearchImage from './SearchImage';
+import {
+  BrowserRouter as Router,
+  Routes as Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Header from './Header';
+import Home from './Home';
+import Cart from './Cart';
 
-const dis = data.map((ele)=>{return(
-  <Dark key={ele.id} id={ele.id} question={ele.question} answer={ele.answer} isopen={ele.isopen}   />
-)})
+
+
+
 
 
 function App() {
+  const [cart,setCart]=useState([])
   return (
     
       <ThemeProvider theme={theme}>
-        {/* <Profile/> */}
-        {/* <ApiTest/> */}
-        <SearchImage/>
-        
-        {/* {dis} */}
-        {/* <Counter/> */}
+       
+        <Router>
+        <Header cart={cart} setCart={setCart} />
+          <Switch>
+            <Route exact path="/" element={<Home cart={cart} setCart={setCart} />} />
+            <Route exact path="/cart" element={<Cart cart={cart} setCart={setCart} />}  />
+          </Switch>
+        </Router>
 
       </ThemeProvider>
     
